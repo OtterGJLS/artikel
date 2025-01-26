@@ -16,7 +16,7 @@
               <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}" class="img-fluid">
             </div>
           @else
-            <img src="https://source.unsplash.com/1200x400?{{ $post->category->name }}" alt="{{ $post->category->name }}" class="img-fluid">
+            <img src="https://thelazy.media/wp-content/uploads/2021/01/vlcsnap-2021-01-28-11h57m53s604-1068x601.png?{{ $post->category->name }}" alt="{{ $post->category->name }}" class="img-fluid">
           @endif
 
         

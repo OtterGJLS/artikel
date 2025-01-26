@@ -51,35 +51,5 @@ class DatabaseSeeder extends Seeder
         //     'category_id' => 1,
         //     'user_id' => 1
         // ]);
-        // Posts::create([
-        //     'title' => 'Judul Kedua',
-        //     'slug' => 'judul-kedua',
-        //     'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        //     'body' => '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate pariatur hic temporibus beatae?</p><p> Non vel illo animi enim, totam delectus molestias velit molestiae! Assumenda autem culpa ullam. Quod nobis dolores voluptatem, debitis quisquam ratione iusto magnam sint omnis tempore quidem deserunt impedit enim ut, sapiente harum adipisci, itaque incidunt illo quibusdam. Fugiat explicabo hic natus tenetur doloribus temporibus voluptatem sint provident sed nemo itaque deserunt, praesentium cum ab minus autem non corporis et quod impedit dolorum odio sequi earum. Explicabo, reprehenderit necessitatibus doloremque eveniet consectetur reiciendis possimus! Sed, incidunt culpa, eveniet error laudantium fugiat amet reiciendis delectus aperiam voluptas asperiores. Expedita sunt quas odit tempora aspernatur dolorum id provident nulla numquam facilis repellat placeat iusto, totam pariatur deserunt fugit sequi optio eius. Aut eius, ab similique corrupti natus magni eaque, aliquam, doloremque delectus dolor ipsum dolorem dolorum? Rem consequatur ea modi labore temporibus ipsa ex, fugiat nihil cumque ut dicta.</p>',
-        //     'category_id' => 1,
-        //     'user_id' => 1
-        // ]);
-        // Posts::create([
-        //     'title' => 'Judul Ketiga',
-        //     'slug' => 'judul-ketiga',
-        //     'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        //     'body' => '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate pariatur hic temporibus beatae?</p><p> Non vel illo animi enim, totam delectus molestias velit molestiae! Assumenda autem culpa ullam. Quod nobis dolores voluptatem, debitis quisquam ratione iusto magnam sint omnis tempore quidem deserunt impedit enim ut, sapiente harum adipisci, itaque incidunt illo quibusdam. Fugiat explicabo hic natus tenetur doloribus temporibus voluptatem sint provident sed nemo itaque deserunt, praesentium cum ab minus autem non corporis et quod impedit dolorum odio sequi earum. Explicabo, reprehenderit necessitatibus doloremque eveniet consectetur reiciendis possimus! Sed, incidunt culpa, eveniet error laudantium fugiat amet reiciendis delectus aperiam voluptas asperiores. Expedita sunt quas odit tempora aspernatur dolorum id provident nulla numquam facilis repellat placeat iusto, totam pariatur deserunt fugit sequi optio eius. Aut eius, ab similique corrupti natus magni eaque, aliquam, doloremque delectus dolor ipsum dolorem dolorum? Rem consequatur ea modi labore temporibus ipsa ex, fugiat nihil cumque ut dicta.</p>',
-        //     'category_id' => 2,
-        //     'user_id' => 2
-        // ]);
-        // Posts::create([
-        //     'title' => 'Judul Keempat',
-        //     'slug' => 'judul-keempat',
-        //     'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        //     'body' => '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate pariatur hic temporibus beatae?</p><p> Non vel illo animi enim, totam delectus molestias velit molestiae! Assumenda autem culpa ullam. Quod nobis dolores voluptatem, debitis quisquam ratione iusto magnam sint omnis tempore quidem deserunt impedit enim ut, sapiente harum adipisci, itaque incidunt illo quibusdam. Fugiat explicabo hic natus tenetur doloribus temporibus voluptatem sint provident sed nemo itaque deserunt, praesentium cum ab minus autem non corporis et quod impedit dolorum odio sequi earum. Explicabo, reprehenderit necessitatibus doloremque eveniet consectetur reiciendis possimus! Sed, incidunt culpa, eveniet error laudantium fugiat amet reiciendis delectus aperiam voluptas asperiores. Expedita sunt quas odit tempora aspernatur dolorum id provident nulla numquam facilis repellat placeat iusto, totam pariatur deserunt fugit sequi optio eius. Aut eius, ab similique corrupti natus magni eaque, aliquam, doloremque delectus dolor ipsum dolorem dolorum? Rem consequatur ea modi labore temporibus ipsa ex, fugiat nihil cumque ut dicta.</p>',
-        //     'category_id' => 2,
-        //     'user_id' => 2
-        // ]);
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
     }
 }

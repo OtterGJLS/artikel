@@ -9,7 +9,7 @@ class Post
         [
             "title" => "Judul Post Pertama",
             "slug" => "judul-post-pertama",
-            "author" => "Dandy Wahyudin",
+            "author" => "AJ",
             "body" => "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam hic libero quis tempora nesciunt, possimus ratione eius similique, repellat vel quod itaque! Voluptatibus, maxime! Minus magni corrupti itaque sequi a exercitationem ab laborum illum non, velit, pariatur fuga aspernatur, nam magnam veniam facilis dolores similique accusantium aliquam ipsam! Laudantium quos similique debitis soluta maiores et eius ipsa qui aperiam veniam, eaque mollitia iste, rerum eveniet consectetur libero accusantium nihil cupiditate."
         ],
         [
