@@ -20,7 +20,6 @@
 			</form>
 		</div>
 	</div>
-
 	@if ($posts->count() > 0)
 		<div class="card mb-3">
 			@if ($posts[0]->image)
@@ -63,7 +62,7 @@
 							<h5 class="card-title">{{ $post->title }}</h5>
 							<p>
 								<small class="text-body-secondary">
-									By. <a href="/posts?author={{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a> 
+									By. <a href="/posts?author={{ $posts[0]->author->username }}" class="text-decoration-none">{{ $posts[0]->author->name }}</a> 
 									{{ $post->created_at->diffForHumans() }}
 								</small>
 							</p>
