@@ -9,7 +9,7 @@ class AboutController extends Controller
 {
     public function index()
     {
-        $url = 'https://the-lazy-media-api.vercel.app/api/detail/2021/01/28/balan-wonderworld-preview';
+        $url = 'https://the-lazy-media-api.vercel.app/api/games';
         $response = Http::get($url);
 
         if ($response->successful()) {
