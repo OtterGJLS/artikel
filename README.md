@@ -1,4 +1,4 @@
-1. git clone bang <br>
+1. git clone https://github.com/OtterGJLS/artikel.git <br>
 2. composer update <br>
 3. ubah jadi .env aja <br>
 4. composer dump-autoload <br>
