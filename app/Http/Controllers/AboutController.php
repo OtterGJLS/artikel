@@ -32,26 +32,54 @@ class AboutController extends Controller
     }
 
     public function showDetail($year, $month, $day, $slug)
-{
-    $key = "{$year}/{$month}/{$day}/{$slug}";
-    $url = "https://the-lazy-media-api.vercel.app/api/detail/{$key}";
-    $response = Http::get($url);
+    {
+        $key = "{$year}/{$month}/{$day}/{$slug}";
+        $url = "https://the-lazy-media-api.vercel.app/api/detail/{$key}";
+        $response = Http::get($url);
 
-    if ($response->successful()) {
-        $data = $response->json();
+        if ($response->successful()) {
+            $data = $response->json();
 
-        if (isset($data['results'])) {
-            return view('viewdetail', [
-                'detail' => $data['results'],
-                'active' => 'about'
+            if (isset($data['results'])) {
+                return view('viewdetail', [
+                    'detail' => $data['results'],
+                    'active' => 'about'
+                ]);
+            } else {
+                return view('error', ['message' => 'Data detail tidak valid']);
+            }
+        } else {
+            return view('error', ['message' => 'Gagal mengambil data detail dari API']);
+        }
+    }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('search'); // Ambil nilai query dari input search
+
+        // Endpoint API untuk pencarian
+        $url = 'https://the-lazy-media-api.vercel.app/api/search';
+        
+        // Jika ada query pencarian, tambahkan ke parameter URL
+        if ($query) {
+            $url .= '?search=' . urlencode($query);
+        }
+
+        // Kirim permintaan ke API
+        $response = Http::get($url);
+        if ($response->successful()) {
+            $data = $response->json(); // Ambil data dari respons API
+
+            return view('about', [
+                'data' => $data, // Kirim hasil pencarian ke view
+                'active' => 'about',
             ]);
         } else {
-            return view('error', ['message' => 'Data detail tidak valid']);
+            // Jika gagal mengambil data dari API, tampilkan pesan error
+            return view('error', ['message' => 'Gagal mengambil data dari API']);
         }
-    } else {
-        return view('error', ['message' => 'Gagal mengambil data detail dari API']);
     }
-}
+
 
     
 }

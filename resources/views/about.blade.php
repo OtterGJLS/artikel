@@ -5,7 +5,7 @@
 
     <div class="row justify-content-center mb-3">
         <div class="col-md-6">
-            <form action="/" method="get">
+            <form action="{{ route('search') }}" method="get">
                 
                 @if (request('category'))
                 <input type="hidden" name="category" value="{{ request('category') }}">
@@ -22,51 +22,29 @@
     </div>
 
     @if(isset($data) && count($data) > 0)
-        <div class="row">
-            @foreach($data as $item)
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <!-- Gambar Thumbnail -->
-                        <img src="{{ $item['thumb'] ?? '#' }}" class="card-img-top" alt="{{ $item['title'] ?? 'Gambar Tidak Tersedia' }}">
-
-                        <div class="card-body">
-                            <!-- Judul -->
-                            <h5 class="card-title">{{ $item['title'] ?? 'Judul Tidak Tersedia' }}</h5>
-
-                            <!-- Author -->
-                            <p class="card-text">
-                                <small class="text-muted">
-                                    <strong>Penulis:</strong> {{ $item['author'] ?? 'Penulis Tidak Tersedia' }}
-                                </small>
-                            </p>
-
-                            <!-- Tanggal -->
-                            <p class="card-text">
-                                <small class="text-muted">
-                                    <strong>Tanggal:</strong> {{ $item['time'] ?? 'Tanggal Tidak Tersedia' }}
-                                </small>
-                            </p>
-
-                            <!-- Kategori -->
-                            <p class="card-text">
-                                <small class="text-muted">
-                                    <strong>Kategori:</strong> {{ $item['tag'] ?? 'Kategori Tidak Tersedia' }}
-                                </small>
-                            </p>
-
-                            <!-- Deskripsi -->
-                            <p class="card-text">{{ $item['desc'] ?? 'Deskripsi Tidak Tersedia' }}</p>
-
-                            <!-- Tombol Baca Selengkapnya -->
-                            <a href="{{ url('/detail/' . ($item['key'] ?? '#')) }}" class="btn btn-primary">Baca Selengkapnya</a>
-                        </div>
+    <div class="row">
+        @foreach($data as $item)
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ $item['thumb'] ?? '#' }}" class="card-img-top" alt="{{ $item['title'] ?? 'Gambar Tidak Tersedia' }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $item['title'] ?? 'Judul Tidak Tersedia' }}</h5>
+                        <p class="card-text">
+                            <small class="text-muted">
+                                <strong>Penulis:</strong> {{ $item['author'] ?? 'Penulis Tidak Tersedia' }}
+                            </small>
+                        </p>
+                        <p class="card-text">{{ $item['desc'] ?? 'Deskripsi Tidak Tersedia' }}</p>
+                        <a href="{{ url('/detail/' . ($item['key'] ?? '#')) }}" class="btn btn-primary">Baca Selengkapnya</a>
                     </div>
                 </div>
-            @endforeach
-        </div>
-    @else
-        <div class="alert alert-warning" role="alert">
-            Data tidak tersedia.
-        </div>
-    @endif
+            </div>
+        @endforeach
+    </div>
+@else
+    <div class="alert alert-warning" role="alert">
+        Tidak ada hasil pencarian untuk "{{ request('search') }}".
+    </div>
+@endif
+
 @endsection
