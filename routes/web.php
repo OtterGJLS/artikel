@@ -24,7 +24,8 @@ use App\Http\Controllers\AboutController;
 Route::get('/', function () {
     return view('home', [
         "title" => "Home",
-        "active" => 'home'
+        "active" => 'home',
+        "image" => "gambar.png"
     ]);
 });
 
