@@ -1,5 +1,5 @@
-git clone bang
-composer update
+<br>git clone bang
+<br>composer update
 ubah jadi .env aja
 composer dump-autoload
 php artisan migrate
