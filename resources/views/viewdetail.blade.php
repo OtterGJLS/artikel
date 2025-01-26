@@ -35,4 +35,5 @@
             @endif
         @endforeach
     </div>
+    <a href="/about" class="btn btn-primary">Kembali</a>
 @endsection
