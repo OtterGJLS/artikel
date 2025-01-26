@@ -1,7 +1,7 @@
-<br>git clone bang
-<br>composer update
-ubah jadi .env aja
-composer dump-autoload
-php artisan migrate
-php artisan storage:link
-php artisan serve
+1. git clone bang <br>
+2. composer update <br>
+3. ubah jadi .env aja <br>
+4. composer dump-autoload <br>
+5. php artisan migrate <br>
+6. php artisan storage:link <br>
+7. php artisan serve <br>
