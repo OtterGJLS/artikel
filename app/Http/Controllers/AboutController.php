@@ -30,4 +30,28 @@ class AboutController extends Controller
             return view('error', ['message' => 'Gagal mengambil data dari API']);
         }
     }
+
+    public function showDetail($year, $month, $day, $slug)
+{
+    $key = "{$year}/{$month}/{$day}/{$slug}";
+    $url = "https://the-lazy-media-api.vercel.app/api/detail/{$key}";
+    $response = Http::get($url);
+
+    if ($response->successful()) {
+        $data = $response->json();
+
+        if (isset($data['results'])) {
+            return view('viewdetail', [
+                'detail' => $data['results'],
+                'active' => 'about'
+            ]);
+        } else {
+            return view('error', ['message' => 'Data detail tidak valid']);
+        }
+    } else {
+        return view('error', ['message' => 'Gagal mengambil data detail dari API']);
+    }
+}
+
+    
 }
